@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'pages/index'
   get 'pages/index2'
+  get 'pages/index3'
   get 'pages/get_address'
   post 'pages/direccion'
   root 'pages#index'

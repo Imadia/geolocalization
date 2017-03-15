@@ -10,14 +10,22 @@ class PagesController < ApplicationController
 	def index2
 	end
 
+	def index3
+		@users = User.all
+  		@markers = Gmaps4rails.build_markers(@users) do |user,marker|
+  			marker.lat user.latitude
+  			marker.lng user.longitude
+		end
+	end
+
 	def get_address
-		if params[:latitude].present? && params[:longitude].present?
+		#if params[:latitude].present? && params[:longitude].present?
 			@direccion = Geocoder.address([params[:latitude],params[:longitude]])
 			#{direccion: Geocoder.address([params[:latitude],params[:longitude]])}
 			render json: @direccion
 		# else
 		# 	@direccion = "error"
-		end	
+		#end	
 	end
 
 	def direccion
