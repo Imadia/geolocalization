@@ -11,6 +11,8 @@ gem 'rails', '~> 5.0.2'
 #geocoder para convertir direcciones en latitud y longitud
 gem 'geocoder'
 gem 'devise'
+gem 'gmaps4rails'
+gem 'underscore-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
